@@ -26,21 +26,7 @@ const ProductList = () => {
 
  }, [])
 
- useEffect(() => {
-      async function fetchProducts(){
-      
-        const response = await fetch('https://fakestoreapi.com/products')
-        const prodResponse = await response.json();
 
-        setAllProducts(prodResponse);
-    }
-    
-  fetchProducts(); 
-
-
-
- }, [])
- 
  // console.log(allproducts);
   const filetredProducts =  allproducts.filter((wholeProduct) => wholeProduct.category === "men's clothing" || wholeProduct.category === "women's clothing");
     
